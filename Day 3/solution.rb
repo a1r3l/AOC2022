@@ -19,7 +19,7 @@ puts part_1_sum
 # Part 2
 part_2_sum = 0
 input.each_slice(3) do |c|
-  repeated = chunk[0].split('')
+  repeated = c[0].split('')
                      .select { |i| c[1].include?(i) && c[2].include?(i) }
                      .first
   part_2_sum += priority(repeated)
